@@ -1,11 +1,11 @@
-// Time Complexity :
-// Space Complexity :
-// Did this code successfully run on Leetcode :
-// Any problem you faced while coding this :
+// Time Complexity : O(nlogn)
+// Space Complexity : O(1)
+// Did this code successfully run on Leetcode : Yes
+// Any problem you faced while coding this : No
 
 
 // Your code here along with comments explaining your approach
-
+// the array is recursively divided into half and the smallest bits are sorted and merged again to form an array
 
 
 class MergeSort
@@ -16,8 +16,8 @@ class MergeSort
     void merge(int arr[], int l, int m, int r)
     {
         //Your code here
-        int n1 = m -l;
-        int n2 = r - (m+1);
+        int n1 = m -l +1;
+        int n2 = r - m;
 
         int L[] = new int[n1];
         int R[] = new int[n2];
@@ -63,6 +63,7 @@ class MergeSort
     {
         if(l< r) {
             int mid = (l + r) / 2;
+            System.out.println("l "+l+" r "+r+" mid "+mid);
             sort(arr, l, mid);
             sort(arr, mid + 1, r);
 

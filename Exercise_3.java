@@ -1,11 +1,12 @@
-// Time Complexity :
-// Space Complexity :
-// Did this code successfully run on Leetcode :
-// Any problem you faced while coding this :
+// Time Complexity : O(n)
+// Space Complexity : O(1)
+// Did this code successfully run on Leetcode : Yes
+// Any problem you faced while coding this : No
 
 
 // Your code here along with comments explaining your approach
-
+//Implemented the hare and tortoise algorithm where the fast pointer traverse at 2x speed and slow pointer traverses 
+// the entire array. Once the fast pointer reaches end of array, the slow pointer is at the middle of the linked list
 
 
 class LinkedList
@@ -32,7 +33,7 @@ class LinkedList
             System.out.println("List is Empty");
         }
         Node fast =head, slow = head;
-        while(fast.next.next != null){
+        while(fast.next != null && fast.next.next != null){
             fast = fast.next.next;
             slow = slow.next;
         }
